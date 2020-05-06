@@ -2,10 +2,8 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    node: true
-  },
-  parserOptions: {
-    parser: 'babel-eslint'
+    node: true,
+    jest: true
   },
   extends: [
     '@nuxtjs',
@@ -20,5 +18,9 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    'vue/html-self-closing': 'off',
+    'space-before-function-paren': 'off',
+    'comma-dangle': 'off',
+    'semi': 'off',
   }
 }
