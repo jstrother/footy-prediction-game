@@ -4,4 +4,4 @@ export const determineSeason = (): number => {
 
   // until the COVID-19 pandemic is over, we are using historical data
   return 2018;
-}
+};

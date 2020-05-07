@@ -3,6 +3,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { SoccerApiModule } from './soccer-api/soccer-api.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { AppService } from './app.service';
         useUnifiedTopology: true,
       }),
     }),
+    SoccerApiModule,
   ],
   controllers: [AppController],
   providers: [AppService],

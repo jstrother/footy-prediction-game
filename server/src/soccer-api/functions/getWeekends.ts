@@ -1,13 +1,12 @@
 import { isWeekend } from 'date-fns';
-import { DateRange } from '../interfaces/dateRange.interface'
 
-export const getWeekends = (dateRange: DateRange): Array<string> => {
+export const getWeekends = (dateRange): Array<string> => {
   const end = new Date(dateRange.earliestEnd);
   const weekends = [];
 
   let start = new Date(dateRange.latestStart);
 
-  while(start <= end) {
+  while (start <= end) {
     if (isWeekend(start)) {
       weekends.push(start.toUTCString());
     }
@@ -15,4 +14,4 @@ export const getWeekends = (dateRange: DateRange): Array<string> => {
   }
 
   return weekends;
-}
+};

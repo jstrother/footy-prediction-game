@@ -13,7 +13,7 @@ export const getSeasonDates = (leagueList: Array<object>): object => {
   });
 
   return seasonDates;
-}
+};
 
 function latestStartCompare(leagueDate: string, seasonDate = ''): string {
   return seasonDate === '' ? leagueDate : largest(leagueDate, seasonDate);
